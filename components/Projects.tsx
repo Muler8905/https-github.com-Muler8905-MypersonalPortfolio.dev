@@ -74,7 +74,7 @@ const Projects: React.FC<ProjectsProps> = ({ onProjectClick }) => {
                   <div className="absolute top-2 right-2 flex gap-2 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity z-20">
                      <button 
                        onClick={(e) => handleDelete(e, project.id)} 
-                       className="p-2 bg-white/90 rounded-full text-red-600 shadow-sm hover:bg-red-50 active:scale-95 transition-transform"
+                       className="p-2 bg-white/90 rounded-full text-red-600 shadow-sm hover:bg-red-600 hover:text-white active:scale-95 transition-all duration-300"
                        title="Delete Project"
                      >
                        <Trash2 size={14}/>

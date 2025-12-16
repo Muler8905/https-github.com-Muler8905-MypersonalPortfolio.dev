@@ -96,13 +96,13 @@ const About: React.FC<AboutProps> = ({ onBack }) => {
   };
 
   return (
-    <section className="pt-32 pb-24 min-h-screen bg-gray-50 dark:bg-[#0B0F19] transition-colors duration-300">
+    <section className="pt-24 md:pt-32 pb-24 min-h-screen bg-gray-50 dark:bg-[#0B0F19] transition-colors duration-300">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Back Button */}
         <button 
           onClick={onBack}
-          className="group flex items-center gap-2 text-sm font-medium text-gray-500 hover:text-violet-600 dark:text-gray-400 dark:hover:text-violet-400 transition-colors mb-8"
+          className="group flex items-center gap-2 text-sm font-medium text-gray-500 hover:text-violet-600 dark:text-gray-400 dark:hover:text-violet-400 transition-colors mb-6 md:mb-8"
         >
           <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
           Back to Home
@@ -111,20 +111,19 @@ const About: React.FC<AboutProps> = ({ onBack }) => {
         <div className="bg-white dark:bg-[#131b2e] rounded-3xl shadow-xl dark:shadow-none border border-gray-200 dark:border-white/5 overflow-hidden">
           
           {/* Header Image / Banner */}
-          <div className="relative h-48 md:h-64 w-full overflow-hidden">
-             {/* Gradient overlay removed for clear view of banner */}
+          <div className="relative h-40 sm:h-56 md:h-72 w-full overflow-hidden">
              <img 
                src="https://media.licdn.com/dms/image/v2/D4D16AQHgDIa-WaS3iw/profile-displaybackgroundimage-shrink_350_1400/B4DZo2MeOSKIAc-/0/1761845833705?e=1767225600&v=beta&t=eQesyafC0hNNtFye3gpriL_yEXEQ-eegF7aLC-CMcR8" 
                alt="Workspace Banner" 
-               className="w-full h-full object-cover"
+               className="w-full h-full object-cover object-center"
              />
           </div>
 
           {/* Profile Section with Avatar Overlay */}
-          <div className="px-8 md:px-12 relative">
-             <div className="-mt-16 md:-mt-20 mb-6 flex flex-col md:flex-row items-start md:items-end justify-between gap-4 relative z-20">
+          <div className="px-6 sm:px-8 md:px-12 relative">
+             <div className="-mt-12 sm:-mt-16 md:-mt-20 mb-6 flex flex-col md:flex-row items-start md:items-end justify-between gap-4 relative z-20">
                 <div className="relative group">
-                   <div className="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-white dark:border-[#131b2e] shadow-xl overflow-hidden bg-white relative">
+                   <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full border-4 border-white dark:border-[#131b2e] shadow-xl overflow-hidden bg-white relative">
                       <img 
                         src={profileImg}
                         onError={handleProfileError}
@@ -157,12 +156,12 @@ const About: React.FC<AboutProps> = ({ onBack }) => {
                            </button>
                       </div>
                    </div>
-                   <div className="absolute bottom-2 right-2 w-6 h-6 bg-green-500 border-4 border-white dark:border-[#131b2e] rounded-full z-10"></div>
+                   <div className="absolute bottom-2 right-2 w-5 h-5 md:w-6 md:h-6 bg-green-500 border-4 border-white dark:border-[#131b2e] rounded-full z-10"></div>
                 </div>
                 
                 <div className="flex-1 pt-2 md:pb-4">
-                   <h1 className="text-3xl md:text-4xl font-display font-bold text-gray-900 dark:text-white">Muluken Ugamo</h1>
-                   <p className="text-violet-600 dark:text-violet-400 font-medium">Software Engineer & Full Stack Developer</p>
+                   <h1 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-gray-900 dark:text-white">Muluken Ugamo</h1>
+                   <p className="text-violet-600 dark:text-violet-400 font-medium text-sm sm:text-base">Software Engineer & Full Stack Developer</p>
                 </div>
 
                 <div className="hidden md:block pb-4">
@@ -172,10 +171,10 @@ const About: React.FC<AboutProps> = ({ onBack }) => {
                 </div>
              </div>
 
-             <div className="h-px bg-gray-100 dark:bg-white/5 my-8"></div>
+             <div className="h-px bg-gray-100 dark:bg-white/5 my-6 md:my-8"></div>
             
             {/* Quick Info Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-12">
                <div className="flex items-start gap-4 p-4 rounded-2xl bg-gray-50 dark:bg-white/5 border border-gray-100 dark:border-white/5 hover:border-violet-500/20 transition-colors">
                   <div className="p-3 bg-pink-100 dark:bg-pink-900/30 rounded-xl text-pink-600 dark:text-pink-400">
                     <MapPin size={24} />
@@ -215,7 +214,7 @@ const About: React.FC<AboutProps> = ({ onBack }) => {
             </div>
 
             {/* Main Content Text */}
-            <div className="space-y-6 text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light">
+            <div className="space-y-6 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light">
               <p>
                 My name is <strong className="text-gray-900 dark:text-white font-medium">Muluken Ugamo</strong>. I am originally from Aleta Wendo, Southern Sidama Regional State, Ethiopia, and currently residing in <strong className="text-gray-900 dark:text-white font-medium">Dire Dawa city</strong>. My journey in technology truly began in 2023, when I joined Dire Dawa University and was admitted to the Software Engineering department. That moment marked a major turning point in my life.
               </p>

@@ -266,7 +266,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ projectId, onBack, onNavigate
                                    </button>
                                    <button 
                                      onClick={(e) => handleDelete(e, p.id)} 
-                                     className="p-2 bg-white/90 rounded-full text-red-600 shadow-sm hover:bg-red-50 active:scale-95 transition-transform"
+                                     className="p-2 bg-white/90 rounded-full text-red-600 shadow-sm hover:bg-red-600 hover:text-white active:scale-95 transition-all duration-300"
                                      title="Delete"
                                    >
                                      <Trash2 size={14}/>
@@ -310,7 +310,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ projectId, onBack, onNavigate
                  <button onClick={(e) => handleEdit(e, project)} className="flex items-center gap-2 px-4 py-2 bg-gray-200 dark:bg-white/10 text-gray-800 dark:text-white text-sm font-semibold rounded-lg hover:bg-gray-300 dark:hover:bg-white/20 transition-colors">
                     <Edit2 size={16} /> Edit
                  </button>
-                 <button onClick={(e) => handleDelete(e, project.id)} className="flex items-center gap-2 px-4 py-2 bg-red-100 dark:bg-red-900/20 text-red-700 dark:text-red-400 text-sm font-semibold rounded-lg hover:bg-red-200 dark:hover:bg-red-900/30 transition-colors">
+                 <button onClick={(e) => handleDelete(e, project.id)} className="flex items-center gap-2 px-4 py-2 bg-red-100 dark:bg-red-900/20 text-red-700 dark:text-red-400 text-sm font-semibold rounded-lg hover:bg-red-600 hover:text-white dark:hover:bg-red-600 dark:hover:text-white transition-all">
                     <Trash2 size={16} /> Delete
                  </button>
                  {project.demoUrl && (
