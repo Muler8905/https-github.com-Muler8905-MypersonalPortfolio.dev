@@ -3,13 +3,13 @@ import { Project } from './types';
 export const DEFAULT_PROJECTS: Project[] = [
   {
     id: '1',
-    title: 'Neon AI Thumbnail',
+    title: 'AI YouTube Thumbnail Generator',
     description: 'An AI-powered SaaS platform allowing content creators to generate high-CTR thumbnails using text prompts.',
-    longDescription: 'Neon AI Thumbnail is a cutting-edge SaaS application designed to revolutionize how content creators design their YouTube thumbnails. By leveraging the power of Google\'s Gemini API and advanced image generation models, users can simply describe their video concept in text, and the system generates high-quality, click-optimized thumbnails in seconds. The platform includes a drag-and-drop editor for final touches, user authentication, and a credit-based payment system.',
+    longDescription: 'AI YouTube Thumbnail Generator is a cutting-edge SaaS application designed to revolutionize how content creators design their YouTube thumbnails. By leveraging the power of Google\'s Gemini API and advanced image generation models, users can simply describe their video concept in text, and the system generates high-quality, click-optimized thumbnails in seconds. The platform includes a drag-and-drop editor for final touches, user authentication, and a credit-based payment system.',
     tags: ['Next.js', 'React', 'Gemini API', 'Tailwind CSS', 'Stripe', 'PostgreSQL'],
     imageUrl: 'https://picsum.photos/id/20/1200/800',
-    repoUrl: 'https://github.com/Muler8905',
-    demoUrl: '#',
+    repoUrl: 'https://github.com/Muler8905/-Muler8905-AI-You-tube-Thaminal-Generator',
+    demoUrl: 'https://ai.studio/apps/drive/1-TUt9noZtxaxsDkKrB5dOGhyGqLZDP6P?fullscreenApplet=true',
     features: [
       'Text-to-Image Generation using Gemini Vision capabilities',
       'Real-time credit system integrated with Stripe',
