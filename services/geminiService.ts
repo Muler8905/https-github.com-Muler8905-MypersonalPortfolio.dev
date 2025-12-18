@@ -3,8 +3,7 @@ import { GoogleGenAI } from "@google/genai";
 // Initialize the Gemini Client
 // Note: In a production environment, you should proxy these requests through a backend
 // to avoid exposing the API key in the client bundle.
-const apiKey = process.env.API_KEY || '';
-const ai = new GoogleGenAI({ apiKey });
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 const PORTFOLIO_CONTEXT = `
 You are an AI assistant for Muluken Ugamo's personal portfolio website.
@@ -43,7 +42,7 @@ Tone & Style:
 `;
 
 export const sendMessageToGemini = async (message: string): Promise<string> => {
-  if (!apiKey) {
+  if (!process.env.API_KEY) {
     return "I'm currently in demo mode (API Key missing). I can tell you that Muluken is a skilled Full Stack Developer specializing in React and AI integration!";
   }
 

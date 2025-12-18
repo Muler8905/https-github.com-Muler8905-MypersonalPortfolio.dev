@@ -9,12 +9,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@google/genai": "^1.33.0",
-    "react-dom": "^19.2.3",
     "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "@google/genai": "^1.33.0",
     "lucide-react": "^0.561.0",
-    "jspdf": "2.5.1",
-    "@emailjs/browser": "^4.3.3"
+    "jspdf": "^3.0.4",
+    "@emailjs/browser": "^4.4.1",
+    "vite": "^7.3.0",
+    "@vitejs/plugin-react": "^5.1.2"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",

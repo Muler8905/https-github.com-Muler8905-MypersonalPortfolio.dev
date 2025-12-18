@@ -110,20 +110,21 @@ const About: React.FC<AboutProps> = ({ onBack }) => {
 
         <div className="bg-white dark:bg-[#131b2e] rounded-3xl shadow-xl dark:shadow-none border border-gray-200 dark:border-white/5 overflow-hidden">
           
-          {/* Header Image / Banner */}
-          <div className="relative h-40 sm:h-56 md:h-72 w-full overflow-hidden">
+          {/* Header Image / Banner - Responsive Height Fix */}
+          <div className="relative h-32 xs:h-40 sm:h-56 md:h-72 w-full overflow-hidden">
+             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-10"></div>
              <img 
                src="https://media.licdn.com/dms/image/v2/D4D16AQHgDIa-WaS3iw/profile-displaybackgroundimage-shrink_350_1400/B4DZo2MeOSKIAc-/0/1761845833705?e=1767225600&v=beta&t=eQesyafC0hNNtFye3gpriL_yEXEQ-eegF7aLC-CMcR8" 
                alt="Workspace Banner" 
-               className="w-full h-full object-cover object-center"
+               className="w-full h-full object-cover object-center md:object-right-bottom transition-transform duration-700 hover:scale-105"
              />
           </div>
 
-          {/* Profile Section with Avatar Overlay */}
-          <div className="px-6 sm:px-8 md:px-12 relative">
-             <div className="-mt-12 sm:-mt-16 md:-mt-20 mb-6 flex flex-col md:flex-row items-start md:items-end justify-between gap-4 relative z-20">
+          {/* Profile Section with Avatar Overlay - Responsive Margin Fix */}
+          <div className="px-5 sm:px-8 md:px-12 relative">
+             <div className="-mt-10 xs:-mt-12 sm:-mt-16 md:-mt-20 mb-6 flex flex-col md:flex-row items-start md:items-end justify-between gap-4 relative z-20">
                 <div className="relative group">
-                   <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full border-4 border-white dark:border-[#131b2e] shadow-xl overflow-hidden bg-white relative">
+                   <div className="w-20 h-20 xs:w-24 xs:h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full border-4 border-white dark:border-[#131b2e] shadow-xl overflow-hidden bg-white relative">
                       <img 
                         src={profileImg}
                         onError={handleProfileError}
@@ -142,26 +143,26 @@ const About: React.FC<AboutProps> = ({ onBack }) => {
                            />
                            <button 
                                onClick={triggerFileInput}
-                               className="p-2 bg-white/20 backdrop-blur-md rounded-full text-white hover:bg-violet-600 transition-all shadow-lg"
+                               className="p-1.5 xs:p-2 bg-white/20 backdrop-blur-md rounded-full text-white hover:bg-violet-600 transition-all shadow-lg"
                                title="Upload New Photo"
                            >
-                               <Camera size={18} />
+                               <Camera size={16} className="xs:w-[18px] xs:h-[18px]" />
                            </button>
                            <button 
                                onClick={handleResetImage}
-                               className="p-2 bg-white/20 backdrop-blur-md rounded-full text-white hover:bg-red-500 transition-all shadow-lg"
+                               className="p-1.5 xs:p-2 bg-white/20 backdrop-blur-md rounded-full text-white hover:bg-red-500 transition-all shadow-lg"
                                title="Reset to Default"
                            >
-                               <RefreshCw size={18} />
+                               <RefreshCw size={16} className="xs:w-[18px] xs:h-[18px]" />
                            </button>
                       </div>
                    </div>
-                   <div className="absolute bottom-2 right-2 w-5 h-5 md:w-6 md:h-6 bg-green-500 border-4 border-white dark:border-[#131b2e] rounded-full z-10"></div>
+                   <div className="absolute bottom-1.5 right-1.5 xs:bottom-2 xs:right-2 w-4 h-4 xs:w-5 xs:h-5 md:w-6 md:h-6 bg-green-500 border-[3px] xs:border-4 border-white dark:border-[#131b2e] rounded-full z-10"></div>
                 </div>
                 
-                <div className="flex-1 pt-2 md:pb-4">
-                   <h1 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-gray-900 dark:text-white">Muluken Ugamo</h1>
-                   <p className="text-violet-600 dark:text-violet-400 font-medium text-sm sm:text-base">Software Engineer & Full Stack Developer</p>
+                <div className="flex-1 pt-1 md:pb-4">
+                   <h1 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-display font-bold text-gray-900 dark:text-white">Muluken Ugamo</h1>
+                   <p className="text-violet-600 dark:text-violet-400 font-medium text-xs xs:text-sm sm:text-base">Software Engineer & Full Stack Developer</p>
                 </div>
 
                 <div className="hidden md:block pb-4">
@@ -171,55 +172,55 @@ const About: React.FC<AboutProps> = ({ onBack }) => {
                 </div>
              </div>
 
-             <div className="h-px bg-gray-100 dark:bg-white/5 my-6 md:my-8"></div>
+             <div className="h-px bg-gray-100 dark:bg-white/5 my-5 md:my-8"></div>
             
             {/* Quick Info Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-12">
-               <div className="flex items-start gap-4 p-4 rounded-2xl bg-gray-50 dark:bg-white/5 border border-gray-100 dark:border-white/5 hover:border-violet-500/20 transition-colors">
-                  <div className="p-3 bg-pink-100 dark:bg-pink-900/30 rounded-xl text-pink-600 dark:text-pink-400">
-                    <MapPin size={24} />
+            <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-3 xs:gap-4 md:gap-6 mb-12">
+               <div className="flex items-start gap-3 xs:gap-4 p-3 xs:p-4 rounded-2xl bg-gray-50 dark:bg-white/5 border border-gray-100 dark:border-white/5 hover:border-violet-500/20 transition-colors">
+                  <div className="p-2 xs:p-3 bg-pink-100 dark:bg-pink-900/30 rounded-xl text-pink-600 dark:text-pink-400">
+                    <MapPin size={20} className="xs:w-6 xs:h-6" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-gray-900 dark:text-white">Location</h3>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">Dire Dawa City, Ethiopia</p>
+                    <h3 className="font-bold text-gray-900 dark:text-white text-sm">Location</h3>
+                    <p className="text-[10px] xs:text-xs text-gray-500 dark:text-gray-400">Dire Dawa City, Ethiopia</p>
                   </div>
                </div>
-               <div className="flex items-start gap-4 p-4 rounded-2xl bg-gray-50 dark:bg-white/5 border border-gray-100 dark:border-white/5 hover:border-violet-500/20 transition-colors">
-                  <div className="p-3 bg-blue-100 dark:bg-blue-900/30 rounded-xl text-blue-600 dark:text-blue-400">
-                    <Calendar size={24} />
+               <div className="flex items-start gap-3 xs:gap-4 p-3 xs:p-4 rounded-2xl bg-gray-50 dark:bg-white/5 border border-gray-100 dark:border-white/5 hover:border-violet-500/20 transition-colors">
+                  <div className="p-2 xs:p-3 bg-blue-100 dark:bg-blue-900/30 rounded-xl text-blue-600 dark:text-blue-400">
+                    <Calendar size={20} className="xs:w-6 xs:h-6" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-gray-900 dark:text-white">Experience</h3>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">Software Engineering (Class of 2027)</p>
+                    <h3 className="font-bold text-gray-900 dark:text-white text-sm">Experience</h3>
+                    <p className="text-[10px] xs:text-xs text-gray-500 dark:text-gray-400">Software Engineering (Class of 2027)</p>
                   </div>
                </div>
-               <div className="flex items-start gap-4 p-4 rounded-2xl bg-gray-50 dark:bg-white/5 border border-gray-100 dark:border-white/5 hover:border-violet-500/20 transition-colors">
-                  <div className="p-3 bg-indigo-100 dark:bg-indigo-900/30 rounded-xl text-indigo-600 dark:text-indigo-400">
-                    <Cpu size={24} />
+               <div className="flex items-start gap-3 xs:gap-4 p-3 xs:p-4 rounded-2xl bg-gray-50 dark:bg-white/5 border border-gray-100 dark:border-white/5 hover:border-violet-500/20 transition-colors">
+                  <div className="p-2 xs:p-3 bg-indigo-100 dark:bg-indigo-900/30 rounded-xl text-indigo-600 dark:text-indigo-400">
+                    <Cpu size={20} className="xs:w-6 xs:h-6" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-gray-900 dark:text-white">Core Focus</h3>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">Full Stack Web & AI Integration</p>
+                    <h3 className="font-bold text-gray-900 dark:text-white text-sm">Core Focus</h3>
+                    <p className="text-[10px] xs:text-xs text-gray-500 dark:text-gray-400">Full Stack Web & AI Integration</p>
                   </div>
                </div>
-               <div className="flex items-start gap-4 p-4 rounded-2xl bg-gray-50 dark:bg-white/5 border border-gray-100 dark:border-white/5 hover:border-violet-500/20 transition-colors">
-                   <div className="p-3 bg-teal-100 dark:bg-teal-900/30 rounded-xl text-teal-600 dark:text-teal-400">
-                     <BookOpen size={24} />
+               <div className="flex items-start gap-3 xs:gap-4 p-3 xs:p-4 rounded-2xl bg-gray-50 dark:bg-white/5 border border-gray-100 dark:border-white/5 hover:border-violet-500/20 transition-colors">
+                   <div className="p-2 xs:p-3 bg-teal-100 dark:bg-teal-900/30 rounded-xl text-teal-600 dark:text-teal-400">
+                     <BookOpen size={20} className="xs:w-6 xs:h-6" />
                    </div>
                    <div>
-                     <h3 className="font-bold text-gray-900 dark:text-white">Education</h3>
-                     <p className="text-sm text-gray-500 dark:text-gray-400">Dire Dawa University</p>
+                     <h3 className="font-bold text-gray-900 dark:text-white text-sm">Education</h3>
+                     <p className="text-[10px] xs:text-xs text-gray-500 dark:text-gray-400">Dire Dawa University</p>
                    </div>
                 </div>
             </div>
 
             {/* Main Content Text */}
-            <div className="space-y-6 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light">
+            <div className="space-y-6 text-sm xs:text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light">
               <p>
                 My name is <strong className="text-gray-900 dark:text-white font-medium">Muluken Ugamo</strong>. I am originally from Aleta Wendo, Southern Sidama Regional State, Ethiopia, and currently residing in <strong className="text-gray-900 dark:text-white font-medium">Dire Dawa city</strong>. My journey in technology truly began in 2023, when I joined Dire Dawa University and was admitted to the Software Engineering department. That moment marked a major turning point in my life.
               </p>
               
-              <div className="my-8 pl-6 border-l-4 border-violet-500 italic text-gray-700 dark:text-gray-200 bg-gray-50 dark:bg-white/5 p-6 rounded-r-xl">
+              <div className="my-6 xs:my-8 pl-4 xs:pl-6 border-l-4 border-violet-500 italic text-gray-700 dark:text-gray-200 bg-gray-50 dark:bg-white/5 p-4 xs:p-6 rounded-r-xl text-xs xs:text-sm md:text-base">
                 "I enjoy turning ideas into real, working solutions and using technology to solve social and community-based problems—this purpose keeps me motivated and energized every day."
               </div>
 
